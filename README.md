@@ -1,2 +1,2 @@
 # product-recommendation
-Product recommndation
+Product recommendation
