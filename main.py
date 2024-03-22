@@ -48,7 +48,6 @@ item_number = get_text()
 
 st.write("Product Recommendations: ")
 
-if item_number:
-    response = get_similar_or_higher_quality_items(df, item_number)
+response = get_similar_or_higher_quality_items(df, item_number)
 
-    st.write(response)
+st.write(response)
