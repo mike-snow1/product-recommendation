@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 
 df = pd.read_csv('data.csv')
+df['Item Number'] = df['Item Number'].astype('str')
 
 def get_similar_or_higher_quality_items(df, item_number):
     # Define the order of quality from lowest to highest
@@ -43,7 +44,7 @@ def get_text():
     input_text = st.text_area(label="Question", label_visibility='collapsed', placeholder="Please enter the product description...", key="text_input")
     return input_text
 
-item_number = int(get_text())
+item_number = get_text()
 
 st.write("Product Recommendations: ")
 
