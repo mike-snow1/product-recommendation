@@ -31,6 +31,8 @@ def get_similar_or_higher_quality_items(df, item_number):
     # If there are no items of the required quality, return 'No recommendations'
     if not similar_quality_items:
         return 'No recommendations'
+    
+    return similar_quality_items
 
 st.set_page_config(page_title="Product Recommendation", page_icon=":robot:", layout="centered")
 st.header("Product Recommendation")
