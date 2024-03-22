@@ -36,14 +36,14 @@ st.header("Product Recommendation")
 
 st.image(image='recommendation.jpeg', width=500)
 
-st.markdown("## Please enter your product description")
+st.markdown("## Please enter your Item Number")
 
 
 def get_text():
     input_text = st.text_area(label="Question", label_visibility='collapsed', placeholder="Please enter the product description...", key="text_input")
     return input_text
 
-item_number = get_text()
+item_number = int(get_text())
 
 st.write("Product Recommendations: ")
 
